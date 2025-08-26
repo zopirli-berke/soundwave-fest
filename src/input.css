@@ -5,6 +5,32 @@
 
 @theme {
   --font-quicksand: "Quicksand", sans-serif;
+  --animate-wavey: wavey 1000ms linear infinite;
+  --animation-delay-100: 100ms;
+  --animation-delay-200: 200ms;
+  --animation-delay-300: 300ms;
+  --animation-delay-400: 400ms;
+  --animation-delay-500: 500ms;
+  --animation-delay-600: 600ms;
+  --animation-delay-700: 700ms;
+  --animation-delay-800: 800ms;
+  --animation-delay-900: 900ms;
+  --animation-delay-1000: 1000ms;
+
+  @keyframes wavey {
+    0%,
+    100% {
+      transform: scaleY(0.5);
+    }
+    50% {
+      transform: scaleY(1.5);
+    }
+  }
+}
+
+@utility animation-delay-* {
+  animation-delay: --value(--animation-delay- *);
+  animation-delay: --value([ *]);
 }
 
 @layer components {
