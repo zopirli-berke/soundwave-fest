@@ -3,187 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <script defer src="./assets//fontawesome//js/fontawesome.min.js"></script>
-    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <script defer src="./app.js"></script>
   </head>
   <body class="font-quicksand">
-    <main class="bg-zinc-200 dark:bg-zinc-900">
-      <header class="text-zinc-200">
-        <button
-          id="dark-mode-toggle"
-          class="fixed top-24 right-0 inline-block cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl w-12"
-        >
-          <span class="dark:hidden">
-            <i class="fa-solid fa-sun"></i>
-          </span>
-          <span class="hidden dark:inline">
-            <i class="fa-solid fa-moon"></i>
-          </span>
-        </button>
-        <nav
-          class="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500 z-50"
-        >
-          <div class="flex items-center p-2 gap-2">
-            <img
-              src="./assets/images/logo-inverted.png"
-              width="50"
-              alt="SoundWave Fest logo"
-            />
-            <div class="font-bold text-2xl">
-              SoundWave <span class="text-sky-900">Fest</span>
-            </div>
+    <header class="text-zinc-200 sticky top-0 z-50">
+      <button
+        id="dark-mode-toggle"
+        class="fixed top-24 right-0 inline-block cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl w-12"
+      >
+        <span class="dark:hidden">
+          <i class="fa-solid fa-sun"></i>
+        </span>
+        <span class="hidden dark:inline">
+          <i class="fa-solid fa-moon"></i>
+        </span>
+      </button>
+      <nav class="flex bg-gradient-to-r from-rose-500 to-pink-500">
+        <a class="flex items-center p-2 gap-2" href="#">
+          <img
+            src="./assets/images/logo-inverted.png"
+            width="50"
+            alt="SoundWave Fest logo"
+          />
+          <div class="font-bold text-2xl">
+            SoundWave <span class="text-sky-900">Fest</span>
           </div>
-          <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
-            <button id="mobile-menu-btn" class="group peer cursor-pointer">
-              <div
-                class="top-0 bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 transition-all group-open:top-2 relative"
-              ></div>
-              <div
-                class="bg-zinc-200 rounded-full w-8 h-1 mt-1 opacity-100 group-open:opacity-0 transition-all"
-              ></div>
-              <div
-                class="top-0 bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 transition-all group-open:-top-2 relative"
-              ></div>
-            </button>
+        </a>
+        <div class="block md:hidden ml-auto pr-4 my-auto cursor-pointer">
+          <button id="mobile-menu-btn" class="group peer cursor-pointer">
             <div
-              class="absolute top-full bg-gradient-to-r from-rose-500 to-pink-500 w-full left-0 peer-open:block hidden"
+              class="top-0 bg-zinc-200 rounded-full w-8 h-1 group-open:rotate-45 transition-all group-open:top-2 relative"
+            ></div>
+            <div
+              class="bg-zinc-200 rounded-full w-8 h-1 mt-1 opacity-100 group-open:opacity-0 transition-all"
+            ></div>
+            <div
+              class="top-0 bg-zinc-200 rounded-full w-8 h-1 mt-1 group-open:-rotate-45 transition-all group-open:-top-2 relative"
+            ></div>
+          </button>
+          <div
+            id="mobile-menu"
+            class="absolute top-full bg-gradient-to-r from-rose-500 to-pink-500 w-full left-0 peer-open:block hidden"
+          >
+            <a
+              href="#headliners"
+              class="relative flex h-full items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
             >
-              <div
-                class="relative flex h-full items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
-              >
-                <span>Home</span>
-              </div>
-              <div
-                class="relative flex h-full items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
-              >
-                <span>Lineup</span>
-              </div>
-              <div
-                id="ticket-menu-item"
-                class="relative h-full text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10 group"
-              >
-                <div class="p-4 text-center font-bold">Tickets</div>
-                <div class="hidden group-open:block">
-                  <div
-                    class="text-center relative text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out p-4"
-                  >
-                    <span>Single day tickets</span>
-                  </div>
-                  <div
-                    class="text-center relative text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out p-4"
-                  >
-                    <span>7 day tickets</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="relative flex h-full items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
-              >
-                <span>Support</span>
-              </div>
-            </div>
-          </div>
-          <div class="hidden flex-1 md:flex items-center justify-end">
-            <div class="menu-item">
-              <span>Home</span>
-            </div>
-            <div class="menu-item">
+              <span>Headliners</span>
+            </a>
+            <a
+              class="relative flex h-full items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
+              href="#lineup"
+            >
               <span>Lineup</span>
-            </div>
-            <div class="menu-item group">
+            </a>
+            <a
+              href="#tickets"
+              class="relative flex h-full items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
+            >
               <span>Tickets</span>
-              <div
-                class="group-hover:block hidden bg-pink-500 absolute top-full right-0 whitespace-nowrap rounded-b-md text-center"
-              >
-                <div
-                  class="p-4 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200"
-                >
-                  <span>Single day ticket</span>
-                </div>
-                <div
-                  class="p-4 font-bold hover:bg-white/10 hover:text-zinc-200 transition-colors ease-in-out cursor-pointer text-pink-200"
-                >
-                  <span>7 day ticket</span>
-                </div>
-              </div>
-            </div>
-            <div class="menu-item">
+            </a>
+            <div
+              class="relative flex h-full items-center justify-center p-4 font-bold text-pink-200 hover:text-zinc-200 transition-colors hover:bg-white/10"
+            >
               <span>Support</span>
             </div>
           </div>
-        </nav>
-        <section>
+        </div>
+        <div class="hidden flex-1 md:flex items-center justify-end">
+          <a class="menu-item" href="#headliners">
+            <span>Headliners</span>
+          </a>
+          <a class="menu-item" href="#lineup">
+            <span>Lineup</span>
+          </a>
+          <a class="menu-item" href="#tickets">
+            <span>Tickets</span>
+          </a>
+          <div class="menu-item">
+            <span>Support</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="bg-zinc-200 dark:bg-zinc-900 text-zinc-200">
+      <section>
+        <div
+          class="flex flex-col items-center justify-center h-[calc(100vh-200px)] min-h-[400px] bg-hero-main"
+        >
           <div
-            class="flex flex-col items-center justify-center h-[calc(100vh-200px)] min-h-[400px] bg-hero-main"
+            class="bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-md"
           >
-            <div
-              class="bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-md"
-            >
-              <div class="relative">
-                <img
-                  src="./assets/images/logo.png"
-                  width="175"
-                  alt="SoundWave Fest logo"
-                />
-                <div class="flex items-center justify-center mt-[-70px] mb-5">
+            <div class="relative">
+              <img
+                src="./assets/images/logo.png"
+                width="175"
+                alt="SoundWave Fest logo"
+              />
+              <div class="flex items-center justify-center mt-[-70px] mb-5">
+                <div
+                  class="bg-pink-500 size-14 rounded-full flex items-center justify-center gap-1"
+                >
                   <div
-                    class="bg-pink-500 w-14 h-14 rounded-full flex items-center justify-center gap-1"
-                  >
-                    <div
-                      class="h-2 w-1 bg-pink-300 rounded-full animate-wavey"
-                    ></div>
-                    <div
-                      class="h-3 w-1 bg-pink-200 rounded-full animate-wavey animation-delay-200"
-                    ></div>
-                    <div
-                      class="h-4 w-1 bg-pink-100 rounded-full animate-wavey animation-delay-[150ms]"
-                    ></div>
-                    <div
-                      class="h-3 w-1 bg-pink-200 rounded-full animate-wavey animation-delay-300"
-                    ></div>
-                    <div
-                      class="h-2 w-1 bg-pink-300 rounded-full animate-wavey animation-delay-[75ms]"
-                    ></div>
-                  </div>
+                    class="h-2 w-1 bg-pink-300 rounded-full animate-wavey"
+                  ></div>
+                  <div
+                    class="h-3 w-1 bg-pink-200 rounded-full animate-wavey animation-delay-200"
+                  ></div>
+                  <div
+                    class="h-4 w-1 bg-pink-100 rounded-full animate-wavey animation-delay-150"
+                  ></div>
+                  <div
+                    class="h-3 w-1 bg-pink-200 rounded-full animate-wavey animation-delay-300"
+                  ></div>
+                  <div
+                    class="h-2 w-1 bg-pink-300 rounded-full animate-wavey animation-delay-75"
+                  ></div>
                 </div>
               </div>
-              <div class="text-xl font-bold mt-3">
-                <p>SoundWave <span class="text-sky-900">Fest</span></p>
-              </div>
             </div>
-
-            <p class="font-bold mt-3 text-sm">
-              Keep me updated with news and promotions
-            </p>
-            <form id="subscribe-form" class="mt-3 flex gap-2">
-              <input
-                type="email"
-                placeholder="Email"
-                required
-                class="rounded-md border border-white/40 bg-white/30 backdrop-blur-md p-2 font-bold text-sky-900 placeholder-sky-700 caret-pink-500 outline-0 hover:border-pink-500 focus:border-pink-500"
-              />
-              <button
-                type="submit"
-                class="cursor-pointer rounded-md bg-pink-500 py-2 px-4 font-bold transition-colors ease-in-out duration-300 hover:bg-sky-900 hover:shadow-lg hover:shadow-gray-900"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p
-              id="subscribe-message"
-              class="hidden mt-2 font-bold text-pink-500"
-            >
-              Thanks for subscribing! 🎉
-            </p>
+            <div class="text-xl font-bold mt-3">
+              <p>SoundWave <span class="text-sky-900">Fest</span></p>
+            </div>
           </div>
-        </section>
-      </header>
+
+          <p class="font-bold mt-3 text-sm">
+            Keep me updated with news and promotions
+          </p>
+          <form id="subscribe-form" class="mt-3 flex gap-2">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              class="rounded-md border border-white/40 bg-white/30 backdrop-blur-md p-2 font-bold text-sky-900 placeholder-sky-700 caret-pink-500 outline-0 hover:border-pink-500 focus:border-pink-500"
+            />
+            <button
+              type="submit"
+              class="cursor-pointer rounded-md bg-pink-500 py-2 px-4 font-bold transition-colors ease-in-out duration-300 hover:bg-sky-900 hover:shadow-lg hover:shadow-gray-900"
+            >
+              Subscribe
+            </button>
+          </form>
+          <p id="subscribe-message" class="hidden mt-2 font-bold text-pink-500">
+            Thanks for subscribing! 🎉
+          </p>
+        </div>
+      </section>
       <section
-        class="max-w-screen-lg mx-auto mt-20 text-zinc-900 dark:text-zinc-200"
+        class="container mx-auto mt-20 text-zinc-900 dark:text-zinc-200"
+        id="headliners"
       >
-        <h2 class="mx-12">Headliners</h2>
+        <h2 class="mx-12">
+          <span
+            class="text-transparent bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text"
+            >Headliners</span
+          >
+        </h2>
         <p class="mx-12">
           Experience the sonic delight from these made-up artists across 7 days
           that music fans are calling "one of the many gigs that will happen
@@ -205,49 +186,49 @@
                 class="h-80 w-full snap-center rounded-xl shadow-md shadow-black/20 bg-hero-band1"
               ></div>
               <h5 class="mt-2">Corduroy Gary</h5>
-              <h6>1st July 9pm - Main Stage</h6>
+              <p>1st July 9pm - Main Stage</p>
             </div>
             <div class="min-w-[80%] md:min-w-[40%]">
               <div
                 class="h-80 w-full snap-center rounded-xl shadow-md shadow-black/20 bg-hero-band2"
               ></div>
               <h5 class="mt-2">Ken's Showing Off Again</h5>
-              <h6>2nd July 9.30pm - Main Stage</h6>
+              <p>2nd July 9.30pm - Main Stage</p>
             </div>
             <div class="min-w-[80%] md:min-w-[40%]">
               <div
                 class="h-80 w-full snap-center rounded-xl shadow-md shadow-black/20 bg-hero-band3"
               ></div>
               <h5 class="mt-2">Golden Quavers</h5>
-              <h6>3rd July 9.30pm - Main Stage</h6>
+              <p>3rd July 9.30pm - Main Stage</p>
             </div>
             <div class="min-w-[80%] md:min-w-[40%]">
               <div
                 class="h-80 w-full snap-center rounded-xl shadow-md shadow-black/20 bg-hero-band4"
               ></div>
               <h5 class="mt-2">Sonic Levitation</h5>
-              <h6>4th July 10pm - Main Stage</h6>
+              <p>4th July 10pm - Main Stage</p>
             </div>
             <div class="min-w-[80%] md:min-w-[40%]">
               <div
                 class="h-80 w-full snap-center rounded-xl shadow-md shadow-black/20 bg-hero-band5"
               ></div>
               <h5 class="mt-2">Collection Point A</h5>
-              <h6>5th July 10pm - Main Stage</h6>
+              <p>5th July 10pm - Main Stage</p>
             </div>
             <div class="min-w-[80%] md:min-w-[40%]">
               <div
                 class="h-80 w-full snap-center rounded-xl shadow-md shadow-black/20 bg-hero-band6"
               ></div>
               <h5 class="mt-2">Laura Can't Eat Dairy</h5>
-              <h6>6th July 10pm - Main Stage</h6>
+              <p>6th July 10pm - Main Stage</p>
             </div>
             <div class="min-w-[80%] md:min-w-[40%]">
               <div
                 class="h-80 w-full snap-center rounded-xl shadow-md shadow-black/20 bg-hero-band7"
               ></div>
               <h5 class="mt-2">Broken Toaster</h5>
-              <h6>7th July 10.30pm - Main Stage</h6>
+              <p>7th July 10.30pm - Main Stage</p>
             </div>
           </div>
           <div
@@ -259,31 +240,263 @@
         </div>
       </section>
       <section
-        class="max-w-screen-lg mx-auto mt-20 text-zinc-900 dark:text-zinc-200 px-[46px]"
+        id="lineup"
+        class="container mx-auto mt-20 text-zinc-900 dark:text-zinc-200 px-[46px]"
       >
-        <h2 class="mt-20">Tickets</h2>
-        <table class="mt-5 table w-full border border-zinc-500 border-collapse">
+        <h2 class="mt-20">
+          <span
+            class="text-transparent bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text"
+            >Lineup</span
+          >
+        </h2>
+        <p>
+          Follow the timetable and stage to ensure you don't miss your favourite
+          artists
+        </p>
+        <div
+          class="relative mt-5 dark:bg-zinc-800 bg-white shadow-lg py-4 px-2 text-zinc-200 rounded-lg"
+        >
+          <div
+            class="absolute top-0 left-1/2 w-4 ml-[-8px] bottom-0 rounded-full bg-gradient-to-b from-sky-900 via-cyan-800 to-teal-900"
+          >
+            <div class="sticky top-1/2">
+              <div class="relative size-4">
+                <div
+                  class="absolute size-4 animate-ping rounded-full bg-pink-500 opacity-75"
+                ></div>
+                <div class="bg-rose-500 rounded-full absolute size-4"></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <h4 class="p-2 dark:bg-zinc-900 bg-zinc-500 rounded-lg my-4">
+                1st July
+              </h4>
+            </div>
+            <div></div>
+            <div class="text-right">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Jackie Chaston
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">6pm - Sage Stage</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Jennifer Connelly
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">
+                7pm - Platform 9¹/²
+              </p>
+            </div>
+            <div class="text-right">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                The Slimy Diamonds
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">8pm - Main Stage</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                The Slimy Diamonds
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">9pm - Main Stage</p>
+            </div>
+            <div></div>
+            <div>
+              <h4 class="p-2 dark:bg-zinc-900 bg-zinc-500 rounded-lg my-4">
+                2nd July
+              </h4>
+            </div>
+
+            <div class="text-right">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                The Phantom Vibrations
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">
+                6pm - Acoustic Tent
+              </p>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Glitter & Grit
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">7pm - Sage Stage</p>
+            </div>
+            <div class="text-right">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Captain Corrosive
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">
+                8pm - Platform 9¹/²
+              </p>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Ken's Showing Off Again
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">
+                9.30pm - Main Stage
+              </p>
+            </div>
+            <div>
+              <h4 class="p-2 dark:bg-zinc-900 bg-zinc-500 rounded-lg my-4">
+                3rd July
+              </h4>
+            </div>
+            <div></div>
+
+            <div class="text-right">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Tuesday's Leftovers
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">
+                6pm - Acoustic Tent
+              </p>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Static Bloom
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">
+                7pm - Platform 9¹/²
+              </p>
+            </div>
+            <div class="text-right">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Echo Chamber Orchestra
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">8pm - Main Stage</p>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="text-left">
+              <p class="font-bold dark:text-zinc-100 text-zinc-900">
+                Golden Quavers
+              </p>
+              <p class="dark:text-zinc-400 text-zinc-900">
+                9.30pm - Main Stage
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="tickets"
+        class="container mx-auto mt-20 text-zinc-900 dark:text-zinc-200 px-[46px]"
+      >
+        <h2 class="mt-20">
+          <span
+            class="text-transparent bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text"
+            >Tickets</span
+          >
+        </h2>
+        <table class="mt-5 w-full border-collapse">
           <thead class="text-lg font-bold">
-            <td class="border border-zinc-500 p-3">Tickets</td>
-            <td class="border border-zinc-500 p-3">Price</td>
+            <tr class="border-b-2 border-zinc-500">
+              <td class="p-3 border-r border-zinc-500">Tickets</td>
+              <td class="p-3 border-r border-zinc-500 w-[500px]">Price</td>
+              <td class="w-[150px]"></td>
+            </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="border border-zinc-500 py-2 px-3">
+            <tr class="border-b border-zinc-500">
+              <td class="py-2 px-3 border-r border-zinc-500">
                 Single day ticket
               </td>
-              <td class="border border-zinc-500 py-2 px-3">30$</td>
+              <td class="py-2 px-3 border-r border-zinc-500">30$</td>
+              <td class="py-2 px-3 text-center">
+                <button
+                  type="submit"
+                  class="cursor-pointer rounded-md bg-pink-500 py-2 px-4 font-bold transition-colors ease-in-out duration-300 hover:bg-sky-900 text-zinc-200"
+                >
+                  Buy Now
+                </button>
+              </td>
             </tr>
             <tr>
-              <td class="border border-zinc-500 py-2 px-3">7 day ticket</td>
-              <td class="border border-zinc-500 py-2 px-3">100$</td>
+              <td class="py-2 px-3 border-r border-zinc-500">7 day ticket</td>
+              <td class="py-2 px-3 border-r border-zinc-500">100$</td>
+              <td class="py-2 px-3 text-center">
+                <button
+                  type="submit"
+                  class="cursor-pointer rounded-md bg-pink-500 py-2 px-4 font-bold transition-colors ease-in-out duration-300 hover:bg-sky-900 text-zinc-200"
+                >
+                  Buy Now
+                </button>
+              </td>
             </tr>
           </tbody>
-          <caption class="caption-bottom mt-3">
+          <caption class="caption-bottom my-5">
             Once they're gone, they're gone!
           </caption>
         </table>
       </section>
     </main>
+    <footer
+      class="bg-gradient-to-r from-rose-500 to-pink-500 text-zinc-200 py-5 px-4"
+    >
+      <div class="container mx-auto flex flex-col items-center gap-8">
+        <a href="#">
+          <img
+            src="./assets/images/logo-inverted.png"
+            width="80"
+            alt="SoundWave Fest logo"
+          />
+        </a>
+
+        <div class="flex gap-6 text-3xl">
+          <a
+            href="https://x.com"
+            class="hover:scale-110 transform transition-transform duration-200"
+            aria-label="X"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a
+            href="https://www.facebook.com"
+            class="hover:scale-110 transform transition-transform duration-200"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            class="hover:scale-110 transform transition-transform duration-200"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/"
+            class="hover:scale-110 transform transition-transform duration-200"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+        <p class="text-sm text-zinc-200 mt-4">
+          © 2025 SoundWave Fest. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
