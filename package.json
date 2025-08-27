@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "tailwindcss": "^4.1.12",
