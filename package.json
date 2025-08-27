@@ -1,27 +1,14 @@
 {
   "name": "soundwave-fest",
   "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/zopirli-berke/tailwind#readme",
-  "bugs": {
-    "url": "https://github.com/zopirli-berke/tailwind/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zopirli-berke/tailwind.git"
-  },
   "license": "ISC",
-  "author": "Berke Zopirli <zberke97@gmail.com>",
-  "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./output.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
   }
 }
