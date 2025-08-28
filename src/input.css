@@ -51,28 +51,28 @@
     @apply relative flex h-full items-center p-4 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out;
   }
   .bg-hero-main {
-    @apply bg-[url('/src/assets/images/hero.jpg')] bg-cover bg-center bg-fixed;
+    @apply bg-[url('/assets/images/hero.jpg')] bg-cover bg-center bg-fixed;
   }
   .bg-hero-band1 {
-    @apply bg-[url('/src/assets/images/band1.jpg')] bg-cover bg-center;
+    @apply bg-[url('/assets/images/band1.jpg')] bg-cover bg-center;
   }
   .bg-hero-band2 {
-    @apply bg-[url('/src/assets/images/band2.jpg')] bg-cover bg-center;
+    @apply bg-[url('/assets/images/band2.jpg')] bg-cover bg-center;
   }
   .bg-hero-band3 {
-    @apply bg-[url('/src/assets/images/band3.jpg')] bg-cover bg-center;
+    @apply bg-[url('/assets/images/band3.jpg')] bg-cover bg-center;
   }
   .bg-hero-band4 {
-    @apply bg-[url('/src/assets/images/band4.jpg')] bg-cover bg-center;
+    @apply bg-[url('/assets/images/band4.jpg')] bg-cover bg-center;
   }
   .bg-hero-band5 {
-    @apply bg-[url('/src/assets/images/band5.jpg')] bg-cover bg-center;
+    @apply bg-[url('/assets/images/band5.jpg')] bg-cover bg-center;
   }
   .bg-hero-band6 {
-    @apply bg-[url('/src/assets/images/band6.jpg')] bg-cover bg-center;
+    @apply bg-[url('/assets/images/band6.jpg')] bg-cover bg-center;
   }
   .bg-hero-band7 {
-    @apply bg-[url('/src/assets/images/band7.jpg')] bg-cover bg-center;
+    @apply bg-[url('/assets/images/band7.jpg')] bg-cover bg-center;
   }
 }
 
