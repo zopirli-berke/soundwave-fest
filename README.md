@@ -30,6 +30,17 @@ At the bottom, a **Ticket** section provides an option to purchase festival tick
 </div>
 
 ---
+## 📸 Preview  
+
+<p align="center">
+  <img src="src/assets/images/readme-images/hero-section-ss.png" alt="Preview 1" width="600"/>
+  <br/>
+  <img src="src/assets/images/readme-images/headliners-section-ss.png" alt="Preview 1" width="600"/>
+  <br/>
+<img src="src/assets/images/readme-images/lineup-section-ss.png" alt="Preview 1" width="600"/>
+<br/>
+<img src="src/assets/images/readme-images/tickets-footer-section-ss.png" alt="Preview 1" width="600"/>
+</p>
 
 ## 📦 Installation  
 
