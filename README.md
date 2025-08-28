@@ -2,7 +2,7 @@
 
 
 
----
+
 
 **SoundWave Fest** is a modern festival website that allows users to explore the performing artists of the event.  
 The **Headliners** section highlights the main stage artists, while the **Lineup** section displays daily performances with their stages and time slots.  
