@@ -51,7 +51,7 @@
     @apply relative flex h-full items-center p-4 cursor-pointer font-bold text-pink-200 hover:text-zinc-200 hover:bg-white/10 transition-colors ease-in-out;
   }
   .bg-hero-main {
-    @apply bg-[url('/assets/images/hero.jpg')] bg-cover bg-center bg-fixed;
+    @apply bg-[url('/assets/images/hero.jpg')] bg-cover bg-center md:bg-fixed;
   }
   .bg-hero-band1 {
     @apply bg-[url('/assets/images/band1.jpg')] bg-cover bg-center;
