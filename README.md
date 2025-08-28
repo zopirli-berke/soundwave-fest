@@ -1,11 +1,8 @@
 # 🎶 SoundWave Fest  
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)  
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)  
 
----
+
+
 
 **SoundWave Fest** is a modern festival website that allows users to explore the performing artists of the event.  
 The **Headliners** section highlights the main stage artists, while the **Lineup** section displays daily performances with their stages and time slots.  
@@ -30,6 +27,17 @@ At the bottom, a **Ticket** section provides an option to purchase festival tick
 </div>
 
 ---
+## 📸 Preview  
+
+<p align="center">
+  <img src="src/assets/images/readme-images/hero-section-ss.png" alt="Preview 1" width="600"/>
+  <br/>
+  <img src="src/assets/images/readme-images/headliners-section-ss.png" alt="Preview 1" width="600"/>
+  <br/>
+<img src="src/assets/images/readme-images/lineup-section-ss.png" alt="Preview 1" width="600"/>
+<br/>
+<img src="src/assets/images/readme-images/tickets-footer-section-ss.png" alt="Preview 1" width="600"/>
+</p>
 
 ## 📦 Installation  
 
