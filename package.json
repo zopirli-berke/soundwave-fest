@@ -4,7 +4,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./output.css --minify",
+    "build": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./src/output.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
